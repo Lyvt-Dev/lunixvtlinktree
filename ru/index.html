@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Спокойно - портфолио</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../assets/css/language-modal.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/index.css" />
+  <link rel="stylesheet" href="../assets/css/settings.css" />
+</head>
+<body>
+  <div id="settings-button" title="Settings">
+    <i class="fas fa-cog"></i>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="background-music" loop>
+    <source src="../assets/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="tsparticles"></div>
+
+
+
+
+  <div class="container">
+    <nav>
+      <a href="index.html" class="fade-in" style="--delay: 0.1s">Дом</a>
+      <a href="gen.html" class="fade-in" style="--delay: 0.15s">Генератор пароля</a>
+      <a href="speedtest.html" class="fade-in" style="--delay: 0.2s">Скорость теста</a>
+      <a href="listanime.html" class="fade-in" style="--delay: 0.25s">Список аниме</a>
+    </nav>
+
+    <header class="section">
+      <h1 class="fade-in" style="--delay: 0.3s">👋 Эй, я спокойно</h1>
+      <p class="fade-in" style="--delay: 0.4s">Я 17-летний полный стек разработчик из Германии. У меня есть более 2+ лет опыта работы с различными языками программирования, инструментами и технологиями. Проекты, на которых я работал, включают в себя боты для Discord, веб-приложения, кросс-платформенные мобильные и настольные приложения, REST API и многое другое. Я всегда стремлюсь учиться новым вещам, принимать большие вызовы и улучшать свои навыки.</p>
+    </header>
+    
+
+    <section class="section" id="skills">
+      <h2 class="fade-in" style="--delay: 0.45s">🛠️ Навыки</h2>
+      <div class="skills">
+        <div class="card fade-in" style="--delay: 0.5s"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="card fade-in" style="--delay: 0.55s"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="card fade-in" style="--delay: 0.6s"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="card fade-in" style="--delay: 0.65s"><i class="fab fa-react"></i><span>React</span></div>
+        <div class="card fade-in" style="--delay: 0.7s"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+        <div class="card fade-in" style="--delay: 0.75s"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="card fade-in" style="--delay: 0.8s"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="card fade-in" style="--delay: 0.85s"><i class="fas fa-code"></i><span>Lua</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2 class="fade-in" style="--delay: 0.95s">💼 Проекты</h2>
+      <div class="projects">
+        <div class="card project-card fade-in" style="--delay: 1s" onclick="window.open('https://github.com/Lyvt-Dev/Discord-Ticket-Bot', '_blank')">
+          <h3>TicketMate</h3>
+          <p>Открытый исходный код и настраиваемый бот для Discord.</p>
+        </div>
+        <div class="card project-card fade-in" style="--delay: 1.05s" onclick="window.open('https://github.com/Lyvt-Dev/calmly-dev.website', '_blank')">
+          <h3>My Own Website</h3>
+          <p>Эта очень страница, которую вы сейчас просматриваете — чистая и адаптивная.</p>
+        </div>
+        <div class="card project-card fade-in" style="--delay: 1.1s" onclick="window.open('https://github.com/Lyvt-Dev/Java-Password-Manager', '_blank')">
+          <h3>Java Password Manager</h3>
+          <p>Простой но эффективный менеджер паролей написанный на чистом Java.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2 class="fade-in" style="--delay: 1.15s">📬 Контакты</h2>
+      <form id="contactForm" action="https://formspree.io/f/mqabokbn" method="POST" class="fade-in" style="--delay: 1.2s" aria-label="Contact form">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+
+        <label for="email">Электронная почта</label>
+        <input type="email" id="email" name="_replyto" required autocomplete="email" />
+
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" aria-label="Send message">Отправить сообщение</button>
+        <p id="form-status" style="margin-top: 1rem; text-align: center;"></p>
+      </form>
+    </section>
+
+    <footer>
+      <div class="socials">
+        <a href="https://github.com/Lyvt-Dev" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/Lyvt_Dev" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://discord.gg/uT2vsZKrvn" target="_blank" aria-label="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Luca. Сделано с <i class="fas fa-heart"></i> в Германии.</p>
+      <p style="margin-top: 0.5rem;">Посетители: <span id="visitor-count">...</span></p>
+    </footer>
+  </div>
+
+  <script>
+
+
+
+    tsParticles.load("tsparticles", {
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      interactivity: {
+        detectsOn: "canvas",
+        events: {
+          onHover: { enable: true, mode: "grab" },
+          onClick: { enable: true, mode: "push" },
+        },
+        modes: {
+          grab: { distance: 180, links: { opacity: 0.8 } },
+          push: { quantity: 4 },
+        },
+      },
+      particles: {
+        color: { value: "#3b82f6" },
+        links: {
+          enable: true,
+          color: "#3b82f6",
+          distance: 150,
+          opacity: 0.35,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          outModes: { default: "out" },
+          random: true,
+          straight: false,
+          bounce: false,
+        },
+        number: {
+          value: 60,
+          density: { enable: true, area: 800 },
+        },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 3 } },
+      },
+      detectRetina: true,
+    });
+
+    const form = document.getElementById('contactForm');
+
+    // Visitor Counter
+    fetch('https://api.visitors.watch/v1/hit/calmly-dev.xyz/visits')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visitor-count').innerText = data.data.value;
+      })
+      .catch((error) => {
+        console.error('Error fetching visitor count:', error);
+        document.getElementById('visitor-count').innerText = 'N/A';
+      });
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const status = document.getElementById('form-status');
+      const data = new FormData(event.target);
+      try {
+        const response = await fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          status.style.color = 'green';
+          form.reset();
+        } else {
+          const responseData = await response.json();
+          if (Object.hasOwn(responseData, 'errors')) {
+            status.innerHTML = responseData["errors"].map(error => error["message"]).join(", ");
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          }
+          status.style.color = 'red';
+        }
+      } catch (error) {
+        status.innerHTML = "Oops! There was a problem submitting your form";
+        status.style.color = 'red';
+      }
+    });
+  </script>
+  <script src="../js/language-modal.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>

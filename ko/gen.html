@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>비밀번호 생성기 - Calmly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="../assets/css/language-modal.css" />
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <link rel="stylesheet" href="../assets/css/settings.css" />
+  <link rel="stylesheet" href="../assets/css/gen.css" />
+</head>
+<body>
+  <div id="settings-button" title="Settings">
+    <i class="fas fa-cog"></i>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="background-music" loop>
+    <source src="../assets/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="tsparticles"></div>
+
+
+  <div class="container">
+    <nav>
+            <a href="index.html" class="fade-in" style="--delay: 0.1s">홈</a>
+            <a href="gen.html" class="fade-in" style="--delay: 0.15s">비밀번호 생성기</a>
+            <a href="speedtest.html" class="fade-in" style="--delay: 0.1s">속도 테스트</a>
+            <a href="listanime.html" class="fade-in" style="--delay: 0.25s">애니메이션 목록</a>
+    </nav>
+
+    <h1 class="fade-in" style="--delay: 0.2s">
+      <span style="--delay: 0.3s">비밀번호 생성기</span>
+      <span style="--delay: 0.4s">&</span>
+      <span style="--delay: 0.5s">검사기</span>
+    </h1>
+        <p class="subtitle fade-in" style="--delay: 0.6s">안전한 비밀번호를 생성하거나 자신의 비밀번호 강도를 테스트하세요!</p>
+
+    <div class="card fade-in" style="--delay: 0.7s" role="main" aria-label="Password generator and checker">
+
+      <input
+        type="text"
+        id="passwordDisplay"
+        placeholder="생성된 비밀번호 또는 여기에 붙여넣기"
+        aria-describedby="strengthText"
+        aria-label="Password input"
+      />
+
+      <div>
+                <button id="generateBtn" aria-label="Generate a random password">비밀번호 생성</button>
+        <div class="button-container">
+                    <button id="copyBtn" aria-label="Copy password to clipboard">비밀번호 복사</button>
+                    <div id="copy-toast">복사됨!</div>
+        </div>
+      </div>
+
+      <div id="strengthMeter" aria-hidden="true"><div></div></div>
+            <div id="strengthText" aria-live="polite" aria-atomic="true">비밀번호 강도: 해당 없음</div>
+    </div>
+  </div>
+
+  <footer class="fade-in" style="--delay: 0.8s">
+    <p>&copy; 2025 Luca. Made with <i class="fas fa-heart"></i> in Germany.</p>
+        <p style="margin-top: 0.5rem;">방문자: <span id="visitor-count">...</span></p>
+  </footer>
+
+  <script>
+
+
+    tsParticles.load("tsparticles", {
+      background: { color: { value: "transparent" } },
+      fpsLimit: 60,
+      interactivity: {
+        detectsOn: "canvas",
+        events: {
+          onHover: { enable: true, mode: "grab" },
+          onClick: { enable: true, mode: "push" },
+        },
+        modes: {
+          grab: { distance: 150, links: { opacity: 0.7 } },
+          push: { particles_nb: 4 },
+        },
+      },
+      particles: {
+        color: { value: "#3b82f6" },
+        links: {
+          color: "#3b82f6",
+          distance: 150,
+          enable: true,
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          outModes: { default: "out" },
+          random: true,
+        },
+        number: {
+          density: { enable: true, area: 800 },
+          value: 60,
+        },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 3 } },
+      },
+      detectRetina: true,
+    });
+
+    fetch('https://api.visitors.watch/v1/hit/calmly-dev.xyz/visits')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('visitor-count').innerText = data.data.value;
+      })
+      .catch(error => {
+        console.error('Error fetching visitor count:', error);
+        document.getElementById('visitor-count').innerText = 'N/A';
+      });
+
+    const passwordDisplay = document.getElementById("passwordDisplay");
+    const generateBtn = document.getElementById("generateBtn");
+    const copyBtn = document.getElementById("copyBtn");
+    const strengthMeter = document.querySelector("#strengthMeter > div");
+    const strengthText = document.getElementById("strengthText");
+    const copyToast = document.getElementById("copy-toast");
+
+    const checkPasswordStrength = (password) => {
+      let score = 0;
+      if (password.length > 8) score++;
+      if (password.length > 12) score++;
+      if (/[A-Z]/.test(password)) score++;
+      if (/[a-z]/.test(password)) score++;
+      if (/[0-9]/.test(password)) score++;
+      if (/[^A-Za-z0-9]/.test(password)) score++;
+      return score;
+    };
+
+    const updateStrengthIndicator = (password) => {
+      const strength = checkPasswordStrength(password);
+      const strengths = [
+        { text: "매우 약함", color: "#ef4444" },
+        { text: "약함", color: "#f97316" },
+        { text: "보통", color: "#facc15" },
+        { text: "강함", color: "#a3e635" },
+        { text: "매우 강함", color: "#4ade80" },
+      ];
+      const selected = strengths[Math.max(0, strength - 1)];
+      strengthMeter.style.width = `${(strength / 5) * 100}%`;
+      strengthMeter.style.backgroundColor = selected.color;
+      strengthText.textContent = `비밀번호 강도: ${selected.text}`;
+    };
+
+    passwordDisplay.addEventListener("input", (e) => {
+      updateStrengthIndicator(e.target.value);
+    });
+
+    generateBtn.addEventListener("click", () => {
+      const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}\\|;:'\",./<>?";
+      let password = "";
+      for (let i = 0, n = charset.length; i < 16; ++i) {
+        password += charset.charAt(Math.floor(Math.random() * n));
+      }
+      passwordDisplay.value = password;
+      updateStrengthIndicator(password);
+    });
+
+    copyBtn.addEventListener("click", () => {
+      if (!passwordDisplay.value) return;
+      navigator.clipboard.writeText(passwordDisplay.value);
+      copyToast.style.opacity = "1";
+      copyToast.style.visibility = "visible";
+      copyToast.style.transform = "translateX(-50%) translateY(-10px)";
+      setTimeout(() => {
+        copyToast.style.opacity = "0";
+        copyToast.style.visibility = "hidden";
+        copyToast.style.transform = "translateX(-50%) translateY(0)";
+      }, 2000);
+    });
+  </script>
+  <script src="../js/language-modal.js"></script>
+  <script src="../js/settings.js"></script>
+</body>
+</html>

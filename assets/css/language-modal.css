@@ -1,0 +1,129 @@
+.language-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.language-modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.language-modal {
+  position: relative;
+  background: var(--card-bg-light);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.language-modal-overlay.show .language-modal {
+  transform: scale(1);
+}
+
+.language-modal h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.language-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.language-options button {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 180px;
+}
+
+.language-options button:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 0.5rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.close-modal:hover {
+    color: var(--text-light);
+    background-color: rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .language-modal {
+    background: var(--card-bg-dark);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+[data-theme="dark"] .language-modal h2 {
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .language-options button {
+    border-color: #4a5568;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .close-modal:hover {
+    color: var(--text-dark);
+    background-color: rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .language-options button:hover {
+    background-color: #34495e;
+    border-color: #34495e;
+    color: var(--text-dark);
+}
+
+[data-theme="dark"] .close-modal {
+    color: #6b7280;
+}
+
+[data-theme="dark"] .close-modal:hover {
+    color: var(--text-dark);
+}
