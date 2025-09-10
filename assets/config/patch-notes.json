@@ -1,0 +1,98 @@
+[
+  {
+    "version": "1.6",
+    "title": "Version 1.6",
+    "changes": [
+      "Einführung der **Patch Notes**-Seite.",
+      "**About Me**-Seite hinzugefügt.",
+      "Überarbeitung des **Socials-Seiten-Designs** für eine klarere Darstellung."
+    ],
+    "links": [
+      { "label": "zum About Me", "url": "https://lunixvt.online/about/index.html" },
+      { "label": "Bist schon bei den Patch Notes :3", "url": "https://lunixvt.online/patch/index.html" }
+    ]
+  },
+  {
+    "version": "1.5",
+    "title": "Version 1.5",
+    "changes": [
+      "**Cookie-Einstellungen** am unteren Rand der Website hinzugefügt.",
+      "Überarbeitung des Designs für eine noch **gemütlichere (cozy) Ästhetik**.",
+      "**Hover-Effekt** im Streamplan integriert.",
+      "Hintergrund in ein stärkeres **Galaxy-Design** umgestaltet."
+    ],
+    "links": [
+      { "label": "Zur Version 1.5", "url": "https://lunixvt.online" }
+    ]
+  },
+  {
+    "version": "1.4",
+    "title": "Version 1.4",
+    "changes": [
+      "Integration von **Cookies**.",
+      "**Impressum** hinzugefügt.",
+      "**Datenschutzerklärung** hinzugefügt.",
+      "Anzeige der aktuellen **Version** am unteren Rand der Seite.",
+      "**Kontakt-E-Mail** hinzugefügt.",
+      "Alle rechtlich erforderlichen Informationen (z. B. Privacy Policy) ergänzt, um die Website vollständig konform zu machen."
+    ],
+    "links": [
+      { "label": "Zum Impressum", "url": "https://lunixvt.online/impressum/index.html" },
+      { "label": "Zur Datenschutzerklärung", "url": "https://lunixvt.online/datenschutz/index.html" }
+    ]
+  },
+  {
+    "version": "1.3",
+    "title": "Version 1.3",
+    "changes": [
+      "Neuer Tab: **Streamplan**.",
+      "Zusätzliche Animationen für ein dynamischeres Erlebnis.",
+      "Website-Code vollständig überarbeitet für bessere Performance und flüssigeres Laden.",
+      "Einführung einer eigenen **News-Seite** zur Übersicht aller Neuigkeiten."
+    ],
+    "links": [
+      { "label": "Zur Startseite", "url": "https://lunixvt.online" },
+      { "label": "Zur News-Seite", "url": "https://lunixvt.online/news/index.html" }
+    ]
+  },
+  {
+    "version": "1.2",
+    "title": "Version 1.2",
+    "changes": [
+      "Fertigstellung des **Homepage-Designs**.",
+      "Einführung einer **Social Media Box** mit aktuellem Twitter-Post.",
+      "Social Media Box um **Stream Counter** und **Follower Counter** erweitert.",
+      "**Latest News Box** hinzugefügt und erste News veröffentlicht."
+    ],
+    "links": [
+      { "label": "Zur Version 1.2", "url": "https://lunixvt.online" }
+    ]
+  },
+  {
+    "version": "1.1",
+    "title": "Version 1.1",
+    "changes": [
+      "Umstellung auf die neue Domain **lunixvt.online**.",
+      "**Throne Gifts** als zusätzlicher Link ergänzt.",
+      "Erweiterung des Hintergrunds um zusätzliche Sterne.",
+      "**LunixVT** in der Navigationsleiste ist nun klickbar und führt zur Startseite."
+    ],
+    "links": [
+      { "label": "Zur Version 1.1", "url": "https://lunixvt.online/socials/@LunixVT/index.html" }
+    ]
+  },
+  {
+    "version": "1.0",
+    "title": "Version 1.0",
+    "changes": [
+      "Einführung der **Linktree-Funktionalität**.",
+      "Integration von Links zu **Twitch, YouTube, TikTok, Twitter, VGen, Ko-Fi** sowie **Discord**.",
+      "Animierter Hintergrund hinzugefügt.",
+      "**Englische Übersetzung** der Website implementiert.",
+      "Hintergrundmusik integriert."
+    ],
+    "links": [
+      { "label": "Zur Version 1.0", "url": "https://lunixvt.online/socials/@LunixVT/index.html" }
+    ]
+  }
+]

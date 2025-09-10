@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LunixVT - Patch Notes</title>
+    <meta name="description" content="Patch Notes for LunixVT website" />
+    <link rel="stylesheet" href="../assets/css/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../socials/@LunixVT/assets/pictures/favicon.png" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0b0b12" />
+    <style>
+      /* Minor tweaks for patch page */
+      .patch-header { margin: 0 0 12px 0; }
+      .patch-subtitle { color: var(--muted); margin: 0 0 8px 0; }
+      .notes-list { display: grid; gap: 16px; }
+      /* Make each card positionable and leave room for the version pill */
+      .notes-list .news-item { position: relative; padding-bottom: 40px; }
+      /* Adjust bottom padding to fit both pills on small cards */
+      .notes-list .news-item { padding-bottom: 44px; }
+      /* Small bottom-right version pill */
+      .version-pill {
+        position: absolute;
+        right: 14px;
+        bottom: 12px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: var(--text);
+        background: rgba(124,77,255,0.16);
+        border: 1px solid rgba(124,77,255,0.28);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        pointer-events: none;
+      }
+      /* Smaller inline link buttons */
+      .link-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+      .link-btn {
+        display: inline-flex; align-items: center; justify-content: center;
+        padding: 7px 10px;
+        border-radius: 10px;
+        font-weight: 700; font-size: 0.9rem;
+        color: var(--text);
+        text-decoration: none;
+        background: rgba(124,77,255,0.12);
+        border: 1px solid rgba(124,77,255,0.24);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 140ms ease, box-shadow 140ms ease, background-color 160ms ease;
+      }
+      .link-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(124,77,255,0.28); background: rgba(124,77,255,0.18); }
+      
+    </style>
+  </head>
+  <body>
+    <div class="bg-decoration"></div>
+    <div class="bg-stars"></div>
+    <div class="bg-pattern"></div>
+
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="left-controls">
+          <button id="music-toggle" type="button" class="icon-btn" aria-label="Toggle music" title="Music">
+            <span class="icon-music" aria-hidden="true"></span>
+          </button>
+          <audio id="bg-music" loop preload="none">
+            <source src="../assets/music/Backgroundmusic.mp3" type="audio/mpeg" />
+          </audio>
+        </div>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-item">Home</a>
+          <a href="../news/index.html" class="nav-item">News</a>
+          <a href="./index.html" class="nav-item active">Patch Notes</a>
+          <a href="../about/index.html" class="nav-item">Über mich</a>
+          <a href="../socials/@LunixVT/index.html" class="nav-item">Socials</a>
+        </div>
+        <div class="right-spacer"></div>
+      </div>
+    </nav>
+
+    <div class="main-container">
+      <div class="content-box patch-wrapper" style="grid-column: 1 / -1; position: relative;">
+        <h2 class="box-title patch-header">
+          <span class="title-icon">📦</span>
+          Patch Notes
+        </h2>
+        <p class="patch-subtitle">Liebe an alle die, die patch notes lesen · 💕</p>
+        <div id="patch-notes" class="notes-list"></div>
+      </div>
+
+      <!-- Cookie Consent Banner -->
+      <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <div class="cookie-content">
+          <div class="cookie-text">
+            Diese Website verwendet Cookies und bindet Inhalte von Drittanbietern (z. B. Twitch, Twitter) ein.
+            Details findest du in unserer <a href="../datenschutz/index.html" class="cookie-link">Datenschutzerklärung</a>.
+          </div>
+          <div class="cookie-actions">
+            <button id="cookie-reject" class="btn btn-ghost" type="button">Nur notwendige</button>
+            <button id="cookie-accept" class="btn btn-primary" type="button">Alle akzeptieren</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright-text">
+        <p>&copy; All Rights Reserved by LunixVT</p>
+        <p><a class="impressum-link" href="../impressum/index.html">Impressum</a> · <a class="privacy-link" href="../datenschutz/index.html">Datenschutzerklärung</a> · <a class="cookie-settings-link" href="#">Cookie‑Einstellungen</a></p>
+        <p style="color:#aaa;margin:4px 0 0;font-size:12px;"><span class="site-version">v.1.0</span></p>
+      </div>
+    </div>
+
+    <script src="../assets/javascript/twitch-config.js"></script>
+    <script src="../assets/javascript/homepage.js"></script>
+    <script src="../assets/javascript/patch.js"></script>
+  </body>
+  </html>
