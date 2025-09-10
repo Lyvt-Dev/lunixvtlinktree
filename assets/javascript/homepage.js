@@ -827,8 +827,7 @@ function initApp(){
     const consent = new CookieConsent();
 
     const enableTwitchEmbedIfConsented = () => {
-        const mediaAllowed = (consent.status === 'all') || (consent.prefs && consent.prefs.media === true);
-        if (!mediaAllowed) return;
+        // Always enable Twitch embed regardless of cookie consent status
         const iframe = document.querySelector('.vod-embed iframe');
         if (iframe && !iframe.src) {
             const dataSrc = iframe.getAttribute('data-src');
@@ -860,15 +859,9 @@ function initApp(){
         });
     };
 
-    // Load or block third-party embeds based on current consent
-    if (consent.status === 'all' || (consent.prefs && consent.prefs.media === true)) {
-        new XTweetEmbeds();
-        enableTwitchEmbedIfConsented();
-    } else {
-        showVODPlaceholderIfBlocked();
-        // Defer tweets until accepted; XTweetEmbeds will render placeholder as well
-        new XTweetEmbeds();
-    }
+    // Always load third-party embeds regardless of cookie consent
+    new XTweetEmbeds();
+    enableTwitchEmbedIfConsented();
 
     // When consent changes to 'all', enable third-party embeds
     consent.onChange((val) => {
