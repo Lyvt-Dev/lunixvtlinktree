@@ -1,219 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LunixVT - Homepage</title>
-    <meta name="description" content="LunixVT - Homepage" />
-    <link rel="stylesheet" href="assets/css/homepage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="socials/@LunixVT/assets/pictures/favicon.png" />
-</head>
-<body>
-    <div class="bg-decoration"></div>
-    <div class="bg-stars"></div>
-    <div class="bg-pattern"></div>
-
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="left-controls">
-          <button id="music-toggle" type="button" class="icon-btn" aria-label="Toggle music" title="Music">
-            <span class="icon-music" aria-hidden="true"></span>
-          </button>
-          <audio id="bg-music" loop preload="none">
-            <source src="assets/music/Backgroundmusic.mp3" type="audio/mpeg" />
-          </audio>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitch-client-id" content="YOUR_TWITCH_CLIENT_ID" />
+    <title>Für Luni <3</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="background-auras">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-media">
+          <img
+            id="hero-image"
+            src="assets/pictures/white.png"
+            alt="Stilvolle 16:9 Illustration"
+          />
         </div>
-        <div class="nav-links">
-          <a href="index.html" class="nav-item active">Home</a>
-          <a href="news/index.html" class="nav-item">News</a>
-          <a href="patch/index.html" class="nav-item">Patch Notes</a>
-          <a href="about/index.html" class="nav-item">Über mich</a>
-          <a href="socials/@LunixVT/index.html" class="nav-item">Socials</a>
-        </div>
-        <div class="right-spacer"></div>
-      </div>
-    </nav>
-    <div class="main-container">
-        <div class="content-box social-box">
-          <h2 class="box-title">
-            <span class="title-icon">✨</span>
-            Social Media
-          </h2>
-          <div class="social-links"></div>
-          <div class="social-stats">
-            <div class="stat-item">
-              <span class="stat-number">1.1K</span>
-              <span class="stat-label">Followers</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">29</span>
-              <span class="stat-label">Streams</span>
-            </div>
+        <div class="hero-content">
+          <span class="badge" id="hero-badge">Von deiner Community <3</span>
+          <h1 id="hero-title">Erlebe deine Community im besten Licht</h1>
+          <p id="hero-subtitle">
+            Begrüße deine Zuschauer:innen mit einer atmosphärischen Visualisierung im perfekten 16:9-Format und lade sie ein, sich über ihre Twitch-Identität an der Diskussion zu beteiligen.
+          </p>
+          <div class="cta-group">
+            <button class="cta primary" id="hero-cta-primary" type="button">
+              Jetzt eintauchen
+            </button>
+            <button class="cta secondary" id="hero-cta-secondary" type="button">
+              Mehr erfahren
+            </button>
           </div>
         </div>
-        <div class="content-box news-box">
-          <h2 class="box-title">
-            <span class="title-icon">📰</span>
-            Latest News
-          </h2>
-          <div class="news-items">
-            <article class="news-item">
-              <div class="news-date">Sep 7, 2025</div>
-              <h3 class="news-title">Neue Website 💕</h3>
-              <p class="news-excerpt">Unsere Website ist endlich liveee! 🎉✨
-                Schaut super gern vorbei, stöbert ein bisschen rum und sagt uns, wie ihr’s findet! 💖</p>
-            </article>
-            <article class="news-item">
-              <div class="news-date">Sep 4, 2025</div>
-              <h3 class="news-title">VTuber Star Awards</h3>
-              <p class="news-excerpt">Die Nominierungsphase für die VTuber Star Awards läuft! ✨
-                Wenn ihr Lust habt und mich unterstützen möchtet, tragt mich gerne ein – das würde mir unglaublich viel bedeuten. 💖
-                Es gibt verschiedene Kategorien, also schaut gern ins Dokument, wenn ihr mögt. Danke an alle, die mitmachen! 💕</p>
-            </article>
-            <article class="news-item">
-              <div class="news-date">Jul 10, 2025</div>
-              <h3 class="news-title">Erster Steam der Woche 💖</h3>
-              <p class="news-excerpt">Um 18:00 Uhr geht der erste Stream der Woche live! 🎥💫
-                Kommt gern vorbei und startet mit uns gemütlich in die Woche! 🌟💖</p>
-            </article>
-          </div>
-          <a href="news/index.html" class="view-all-btn">View All News</a>
-        </div>
+      </header>
 
-        <div class="content-box stream-plans-box">
-          <h2 class="box-title">
-            <span class="title-icon">📅</span>
-            Stream Plan
-          </h2>
-          <div class="stream-plans">
-            <article class="plan-item">
-              <div class="plan-header">
-                <div class="plan-dates">Mo, Sep 8 → So, Sep 14</div>
-                <div class="plan-status upcoming">Diese Woche 💕</div>
+      <main class="comments-wrapper">
+        <section class="comment-card" aria-labelledby="comments-heading">
+          <header>
+            <h2 id="comments-heading">Community-Kommentare</h2>
+            <p>
+              Verbinde dich mit Twitch, damit wir deinen Anzeigenamen und Avatar übernehmen
+              können. So bleibt jede Stimme authentisch und sicher.
+            </p>
+          </header>
+
+          <div class="twitch-auth">
+            <div class="auth-status" id="auth-status" hidden>
+              <img id="auth-avatar" alt="Twitch Profilbild" />
+              <div>
+                <strong id="auth-name"></strong>
+                <div id="auth-info"></div>
               </div>
-              <ul class="plan-schedule">
-                <li>
-                  <span class="day">Mo</span>
-                  <span class="time"></span>
-                  <span class="activity">PAUSE</span>
-                  <span class="tags">
-                    <span class="tag">Ausruhen</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">Di</span>
-                  <span class="time"></span>
-                  <span class="activity">PAUSE</span>
-                  <span class="tags">
-                    <span class="tag">Ausruhen</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">Mi</span>
-                  <span class="time"></span>
-                  <span class="activity">PAUSE</span>
-                  <span class="tags">
-                    <span class="tag">Ausruhen</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">Do</span>
-                  <span class="time">17:00</span>
-                  <span class="activity">Nano Klemmbausteine ~ und meine Finger auseinandernehmen q.q</span>
-                  <span class="tags">
-                    <span class="tag">basteln</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">Fr</span>
-                  <span class="time">17:00</span>
-                  <span class="activity">Love & Deepspace</span>
-                  <span class="tags">
-                    <span class="tag">Gaming</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">Sa</span>
-                  <span class="time">17:00</span>
-                  <span class="activity">Art mit Fart ~ Zeichnen!! Comms, Logo oder Chibis, mal schauen :3</span>
-                  <span class="tags">
-                    <span class="tag">Art</span>
-                    <span class="tag">Zeichnen</span>
-                    <span class="tag">Relaxen</span>
-                  </span>
-                </li>
-                <li>
-                  <span class="day">So</span>
-                  <span class="time">16:00</span>
-                  <span class="activity">GGD bei Akiva ~ maybe später Reactions</span>
-                  <span class="tags">
-                    <span class="tag">Reaction</span>
-                    <span class="tag">Just Chatting</span>
-                    <span class="tag">Gaming</span>
-                    <span class="tag">Collab</span>
-                  </span>
-                </li>
-              </ul>
-              <div class="plan-footer">
-                <a href="https://www.twitch.tv/lunixvt" target="_blank" rel="noopener" class="watch-btn">Watch on Twitch</a>
-              </div>
-            </article>
+              <button class="logout-button" id="logout-button" type="button" hidden>
+                Logout
+              </button>
+            </div>
+            <button id="twitch-login" type="button">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M2.5 0L0 4.16667V17.5H5V20H7.5L10 17.5H14.1667L20 11.6667V0H2.5ZM18.3333 10.8333L15 14.1667H10L7.5 16.6667V14.1667H3.33333V1.66667H18.3333V10.8333Z"
+                  fill="currentColor"
+                />
+                <path d="M12.5 4.16667H14.1667V9.16667H12.5V4.16667Z" fill="currentColor" />
+                <path d="M8.33333 4.16667H10V9.16667H8.33333V4.16667Z" fill="currentColor" />
+              </svg>
+              Mit Twitch verbinden
+            </button>
           </div>
-        </div>
 
-        <div class="content-box latest-stream-box">
-          <h2 class="box-title">
-            <span class="title-icon">🔴</span>
-            Latest Stream
-          </h2>
-          <div class="latest-stream">
-            <div class="vod-embed aspect-16x9">
-              <iframe
-                data-src="https://player.twitch.tv/?video=2560586374&parent=lunixvt.online&parent=www.lunixvt.online&parent=calmly-dev.xyz&parent=localhost&parent=127.0.0.1"
-                allowfullscreen
-                scrolling="no"
-                frameborder="0">
-              </iframe>
-            </div>
-            <div class="vod-footer">
-              <a id="latest-vod-link" href="https://www.twitch.tv/videos/2560586374" target="_blank" rel="noopener" class="watch-btn">Watch Full Stream</a>
-            </div>
-          </div>
-        </div>
+          <form id="comment-form" hidden>
+            <textarea
+              id="comment-text"
+              name="comment"
+              placeholder="Teile deine Gedanken ..."
+              required
+              maxlength="500"
+            ></textarea>
+            <button type="submit">Kommentar posten</button>
+          </form>
 
-        <!-- Cookie Consent Banner -->
-        <div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-          <div class="cookie-content">
-            <div class="cookie-text">
-              Diese Website verwendet Cookies und bindet Inhalte von Drittanbietern (z. B. Twitch, Twitter) ein.
-              Details findest du in unserer <a href="datenschutz/index.html" class="cookie-link">Datenschutzerklärung</a>.
-            </div>
-            <div class="cookie-actions">
-              <button id="cookie-reject" class="btn btn-ghost" type="button">Nur notwendige</button>
-              <button id="cookie-accept" class="btn btn-primary" type="button">Alle akzeptieren</button>
-            </div>
-          </div>
-        </div>
+          <ul class="comment-list" id="comment-list">
+            <li class="empty-state" id="comment-empty-state">
+              Noch keine Beiträge – sei die erste Stimme!
+            </li>
+          </ul>
+        </section>
+      </main>
 
-        <div class="copyright-text">
-          <p>&copy; All Rights Reserved by LunixVT</p>
-          <p><a class="impressum-link" href="impressum/index.html">Impressum</a> · <a class="privacy-link" href="datenschutz/index.html">Datenschutzerklärung</a> · <a class="cookie-settings-link" href="#">Cookie‑Einstellungen</a></p>
-          <p style="color:#aaa;margin:4px 0 0;font-size:12px;"><span class="site-version">v.1.4</span></p>
-        </div>
+      <footer class="page-footer">
+        &copy; All Rights Reserved by Lyvt
+      </footer>
     </div>
 
-    <!-- Bottom-center scroll down button -->
-    <button id="scroll-down" class="scroll-down-btn" type="button" aria-label="Nach unten scrollen" title="Scroll down">
-      <span class="scroll-arrow" aria-hidden="true"></span>
-    </button>
+    <div class="modal-backdrop" id="modal" data-open="false" aria-hidden="true" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-header">
+          <h3 id="modal-title">Hinweis</h3>
+          <button class="modal-close" id="modal-close" type="button" aria-label="Schließen">
+            &times;
+          </button>
+        </div>
+        <p class="modal-body" id="modal-body"></p>
+        <div class="modal-actions">
+          <button class="cta primary" id="modal-confirm" type="button">Okay</button>
+        </div>
+      </div>
+    </div>
 
-    <script src="assets/javascript/twitch-config.js"></script>
-    <script src="assets/javascript/homepage.js"></script>
-</body>
+    <script src="assets/javascript/config.js" defer></script>
+    <script src="assets/javascript/script.js" defer></script>
+  </body>
 </html>
