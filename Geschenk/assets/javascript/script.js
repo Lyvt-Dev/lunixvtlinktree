@@ -72,7 +72,7 @@
   let comments = [];
 
   const getClientId = () =>
-    twitchConfig.clientId === "YOUR_TWITCH_CLIENT_ID"
+    twitchConfig.clientId === "zgq8ai2dxz5hmiglwnwtz07psyn23w"
       ? document.querySelector('meta[name="twitch-client-id"]')?.content?.trim() ?? ""
       : twitchConfig.clientId;
 
