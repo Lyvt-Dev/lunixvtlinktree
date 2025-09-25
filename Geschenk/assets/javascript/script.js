@@ -29,7 +29,7 @@
       ctaSecondaryLabel: "Mehr erfahren",
     },
     api: {
-      commentsEndpoint: "http://localhost:3000/api/comments",
+      commentsEndpoint: "https://overaffirmative-jeanine-unaligned.ngrok-free.dev/api/comments",
     },
   };
 
