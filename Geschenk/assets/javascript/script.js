@@ -1,15 +1,7 @@
 (function () {
-  /**
-   * Twitch OAuth Integration
-   * --------------------------------------------------
-   * 1. Register your application at https://dev.twitch.tv/
-   * 2. Add the page URL (z.B. https://deine-domain.de/index.html) als Redirect URI.
-   * 3. Trage deine Client-ID in `index.html` im `<meta name="twitch-client-id">` Tag ein.
-   * 4. Optional: Passe die `TWITCH_SCOPES` an, wenn du weitere Berechtigungen brauchst.
-   */
   const DEFAULT_CONFIG = {
     twitch: {
-      clientId: "YOUR_TWITCH_CLIENT_ID",
+      clientId: "zgq8ai2dxz5hmiglwnwtz07psyn23w",
       redirectUri: window.location.origin + window.location.pathname,
       scopes: ["user:read:email"],
       forceVerify: true,
@@ -20,12 +12,12 @@
     },
     hero: {
       imageSrc: "assets/pictures/white.png",
-      imageAlt: "Stilvolle 16:9 Illustration",
-      badge: "Live Community Hub",
+      imageAlt: "",
+      badge: "",
       title: "Erlebe deine Community im besten Licht",
       subtitle:
-        "Begrüße deine Zuschauer:innen mit einer atmosphärischen Visualisierung im perfekten 16:9-Format und lade sie ein, sich über ihre Twitch-Identität an der Diskussion zu beteiligen.",
-      ctaPrimaryLabel: "Jetzt eintauchen",
+        "",
+      ctaPrimaryLabel: "Download",
       ctaSecondaryLabel: "Mehr erfahren",
     },
     api: {
