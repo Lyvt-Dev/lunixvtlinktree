@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lunis Birthday Quiz" />
+    <title>Luni Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="quiz-page is-loading">
+    <div class="page-loader" role="status" aria-live="polite">
+      <div class="page-loader-spinner"></div>
+      <span class="page-loader-text">Loading</span>
+    </div>
+    <div class="ambient">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="floating spark spark-1"></div>
+      <div class="floating spark spark-2"></div>
+      <div class="floating spark spark-3"></div>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="neon-ring neon-ring-1"></div>
+      <div class="neon-ring neon-ring-2"></div>
+      <div class="star star-1"></div>
+      <div class="star star-2"></div>
+      <div class="star star-3"></div>
+      <div class="star star-4"></div>
+      <div class="star star-5"></div>
+    </div>
+
+    <header class="top-nav quiz-nav" data-reveal>
+      <a class="ghost-btn" href="index.html">← Zurück</a>
+      <div class="badge">Luni Quiz</div>
+      <nav class="nav-links">
+        <a href="#quizPlay">Quiz</a>
+        <a href="#results">Ergebnis</a>
+      </nav>
+    </header>
+
+    <main class="quiz-main">
+      <section class="quiz-hero" aria-labelledby="quizHeroTitle" data-reveal>
+        <div class="quiz-hero-card" data-reveal>
+          <span class="quiz-pill">Quiz</span>
+          <h1 id="quizHeroTitle">Wie gut kennst du Luni?</h1>
+          <p>
+            Denkst du, du kennst Luni wirklich? 😏 Teste dein Wissen über Luni dann mit den 10 Fragen 😎 Wir haben Fragen erstellt von einem Zeitraum von 4 Jahren. Alle Infos in diesen Quiz sind Daten von Twitch u.s.w.
+          </p>
+          <ul class="quiz-hero-list">
+            <li>✨ Twitch Facts</li>
+            <li>💞 Luni Facts</li>
+            <li>🎉 Milestones</li>
+          </ul>
+          <button class="primary-btn quiz-scroll" type="button">Jetzt starten</button>
+        </div>
+        <div class="quiz-hero-visual" data-reveal>
+          <div class="quiz-hero-glow"></div>
+          <img src="GiftText_1080p.png" alt="Luni Birthday Art" />
+        </div>
+      </section>
+
+      <section id="quizPlay" class="quiz-playground" aria-live="polite" data-reveal>
+        <div class="quiz-engine" data-question-index="0" data-reveal>
+          <div class="quiz-progress">
+            <span class="quiz-progress-status">Frage 1 von 7</span>
+            <div class="quiz-progress-bar">
+              <span class="quiz-progress-value" style="width: 0%"></span>
+            </div>
+          </div>
+
+          <div class="quiz-question-block">
+            <h2 class="quiz-question">Frage wird geladen …</h2>
+            <p class="quiz-fact" hidden></p>
+          </div>
+
+          <div class="quiz-options" role="list"></div>
+
+          <div class="quiz-controls">
+            <button class="outline-btn quiz-reset" type="button" disabled>Neu starten</button>
+            <button class="primary-btn quiz-next" type="button" disabled>Weiter</button>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <footer class="footer quiz-footer" data-reveal>
+      <p>Made with ❤️ by <a href="https://calmly-dev.xyz" target="_blank" rel="noopener">Lyvt</a></p>
+    </footer>
+
+    <button class="scroll-helper" type="button" aria-hidden="true" tabindex="-1" data-scroll-helper>
+      <span class="scroll-helper-icon">⇣</span>
+      <span class="scroll-helper-tooltip">Scroll ganz nach unten ✨</span>
+    </button>
+
+    <div id="quizResultModal" class="modal quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quizResultTitle" hidden>
+      <div class="modal-content quiz-modal-content" tabindex="-1">
+        <button class="modal-close quiz-result-close" aria-label="Schließen">×</button>
+        <span class="quiz-pill">finished</span>
+        <h2 id="quizResultTitle">Glow Score: <span class="quiz-score">0</span>/<span class="quiz-total">10</span></h2>
+        <p class="quiz-result-message">Glow-Analyse wird geladen …</p>
+        <div class="quiz-modal-actions">
+          <button class="primary-btn quiz-copy" type="button">Ergebnis kopieren</button>
+          <a class="outline-btn quiz-discord" href="https://discord.gg/bvgKpRKXaC" target="_blank" rel="noopener">Community Discord</a>
+        </div>
+        <p class="quiz-modal-hint">Screenshot sichern und mit der Crew teilen ✨</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

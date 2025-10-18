@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cozy Gen-Z Birthday Surprise" />
+  <title>Happy Birthday Luni <3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="is-loading">
+  <div class="page-loader" role="status" aria-live="polite">
+    <div class="page-loader-spinner"></div>
+    <span class="page-loader-text">Loading</span>
+  </div>
+  <div class="ambient">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="floating spark spark-1"></div>
+    <div class="floating spark spark-2"></div>
+    <div class="floating spark spark-3"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="neon-ring neon-ring-1"></div>
+    <div class="neon-ring neon-ring-2"></div>
+    <div class="star star-1"></div>
+    <div class="star star-2"></div>
+    <div class="star star-3"></div>
+    <div class="star star-4"></div>
+    <div class="star star-5"></div>
+  </div>
+
+  <header class="top-nav" data-reveal>
+    <div class="badge">Lunis Birthday <3</div>
+    <nav class="nav-links">
+      <a href="#story">Story</a>
+      <a href="#bubbles">Moments</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+    <button id="confettiTrigger" class="ghost-btn" aria-label="Konfetti">✨</button>
+  </header>
+
+  <main>
+    <section id="story" class="hero" data-reveal>
+      <div class="hero-intro">
+        <span class="hero-tag">Nämlich dein Geburtstag Luni <3</span>
+        <h1>Heute ist ein ganz besonderer Tag!!</h1>
+        <p class="typewriter" data-text="Du bist heute der Main-Character. Lass uns den Moment festhalten." aria-live="polite"></p>
+      </div>
+
+      <div class="hero-card" data-reveal>
+        <div class="hero-photo">
+          <button
+            class="photo-frame"
+            id="openPreview"
+            type="button"
+            data-preview="GiftText_1080p.png"
+            aria-label="Bild in Vorschau öffnen"
+          >
+            <img src="GiftText_1080p.png" alt="Birthday Highlight" />
+            <span class="photo-label">
+              <span class="photo-label-dot"></span>
+              Preview öffnen
+            </span>
+          </button>
+        </div>
+
+        <div class="hero-details">
+          <div class="detail-chip">Song: Toy Day - Toy Day with Jingle</div>
+          <h2>Dein Geburtstag 💞</h2>
+          <div class="message-block">
+            <p>
+              Jetzt nochmal von uns allen: Herzlichen Glückwunsch zum Geburtstag, Luni! 🥳 Wir hoffen,
+              dass du einen wundervollen Tag hast, ganz viel lachst, dich feiern lässt und einfach glücklich bist. 💖
+            </p>
+            <p>
+              Wir alle lieben dich von ganzem Herzen und sind so dankbar, Teil deiner Community zu sein. Du bringst so
+              viel Freude, Liebe und positive Energie in unser Leben, heute wollen wir dir ein Stück davon zurückgeben.
+            </p>
+            <p>
+              Hab den schönsten Geburtstag überhaupt, du hast es dir so sehr verdient! 🎂💐💞
+              <br />
+              Mit ganz viel Liebe, deine Community 💌
+            </p>
+          </div>
+          <ul class="detail-list">
+            <li><strong>🧃 Mood:</strong> Gemacht mit ganz viel liebe 💖</li>
+            <li><strong>🌌 Von:</strong> Deiner Community 💌</li>
+          </ul>
+          <div class="cta-group" id="download">
+            <button class="primary-btn" id="openModal" type="button">Downloads öffnen</button>
+            <button class="outline-btn" id="openContributors" type="button">Crew anzeigen</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="quiz-section" aria-labelledby="quizTitle" data-reveal>
+      <div class="quiz-card" data-reveal>
+        <div class="quiz-heading">
+          <span class="quiz-tag">how well do you know luni?</span>
+          <h2 id="quizTitle">Birthday Quiz Challenge</h2>
+          <p class="quiz-subtitle">Teste dein Luni-Wissen und schalte ein kleines Extra frei.</p>
+        </div>
+        <div class="quiz-content">
+          <ul class="quiz-facts">
+            <li>🌟 10 Fragen – alles rund um Luni</li>
+            <li>💾 Speicher dein Ergebnis oder Screenshot es & teil es auf dem Discord :3</li>
+            <li>🎁 Fragen sind aus dem Zeitraum von über 4 jahren</li>
+          </ul>
+          <div class="quiz-cta">
+            <a class="quiz-btn" href="quiz.html">Zum Quiz</a>
+            <p class="quiz-hint">Tipp: Guck dir das Quiz ganz genau an für Kleine Tipps ✨</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main> 
+
+  <footer class="footer" data-reveal>
+    <p>Made with ❤️ by <a href="https://calmly-dev.xyz" target="_blank" rel="noopener">Lyvt</a></p>
+  </footer>
+
+  <audio id="bgAudio" src="background.mp3" preload="auto" loop hidden></audio>
+
+  <button class="scroll-helper" type="button" aria-hidden="true" tabindex="-1" data-scroll-helper>
+    <span class="scroll-helper-icon">⇣</span>
+    <span class="scroll-helper-tooltip">Scroll ganz nach unten ✨</span>
+  </button>
+
+  <div id="imagePreviewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="previewTitle" hidden>
+    <div class="modal-content preview-content" tabindex="-1">
+      <button class="modal-close" id="closePreview" aria-label="Preview schließen">×</button>
+      <h2 id="previewTitle">Preview</h2>
+      <div class="preview-media">
+        <img id="previewImage" src="GiftText_1080p.png" alt="Birthday Highlight Vorschau" />
+      </div>
+      <p class="preview-caption">Hol dir den Moment in groß✨</p>
+    </div>
+  </div>
+
+  <div id="fsHintModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="fsHintTitle" hidden>
+    <div class="modal-content hint-content" tabindex="-1">
+      <button class="modal-close" id="closeFsHint" aria-label="Hinweis schließen">×</button>
+      <span class="quiz-pill">Tip</span>
+      <h2 id="fsHintTitle"><span class="hint-icon" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+          <path d="M9 4H5a1 1 0 0 0-1 1v4M15 4h4a1 1 0 0 1 1 1v4M9 20H5a1 1 0 0 1-1-1v-4M15 20h4a1 1 0 0 0 1-1v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Bessere Experience</h2>
+      <p>Drück <strong>F11</strong>, um in den Vollbildmodus zu wechseln – wirkt mit dem Design einfach nicer.</p>
+      <div class="modal-actions">
+        <button class="outline-btn" id="acknowledgeFsHint" type="button">Verstanden</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="downloadModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-content downloads-content" tabindex="-1">
+      <button class="modal-close" id="closeModal" aria-label="Modal schließen">×</button>
+      <h2 id="modalTitle">Download das Geschenk</h2>
+      <p>Feel free, das Bild in deiner Lieblingsgröße mitzunehmen. :3</p>
+      <div class="modal-actions">
+        <div class="download-group">
+          <div class="download-header">
+            <span class="download-icon">💌</span>
+            <div class="download-text">
+              <span class="download-label">Mit Text</span>
+              <p class="download-sub">Mit dem Happy Birthday Print und vollem Glow.</p>
+            </div>
+          </div>
+          <div class="download-buttons">
+            <a class="modal-btn" href="GiftText_1080p.png" download="GiftText_1080p.png" data-close="true">GiftText · 1920×1080</a>
+            <button class="modal-btn alt" type="button" data-resize="true" data-source="GiftText_1080p.png" data-width="1280" data-file="GiftText_720p.png">GiftText · 1280×720</button>
+          </div>
+        </div>
+        <div class="download-group">
+          <div class="download-header">
+            <span class="download-icon">🌌</span>
+            <div class="download-text">
+              <span class="download-label">Ohne Text</span>
+              <p class="download-sub">Ohne dem Happy Birthday Print damit man die Character besser sehen Kann <3</p>
+            </div>
+          </div>
+          <div class="download-buttons">
+            <a class="modal-btn" href="GiftClean_1080p.png" download="GiftClean_1080p.png" data-close="true">GiftClean · 1920×1080</a>
+            <button class="modal-btn alt" type="button" data-resize="true" data-source="GiftClean_1080p.png" data-width="1280" data-file="GiftClean_720p.png">GiftClean · 1280×720</button>
+          </div>
+        </div>
+      </div>
+      <span class="modal-hint">Tipp: Speicher beides :3 ✨</span>
+    </div>
+  </div>
+
+  <div id="contributorsModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="contributorsTitle" hidden>
+    <div class="modal-content contributors-content" tabindex="-1">
+      <button class="modal-close" id="closeContributors" aria-label="Crew schließen">×</button>
+      <div class="contributors-header">
+        <div class="contributors-headline">
+          <h2 id="contributorsTitle">Crew Love</h2>
+          <p class="contributors-intro">Alle, die dieses Geschenk mit Herz gestaltet haben:</p>
+        </div>
+        <span class="contributors-tag">Community Squad</span>
+      </div>
+      <span class="contributors-divider" aria-hidden="true"></span>
+      <ul class="contributors-list">
+        <li>
+          <div class="contributor-card-header">
+            <span class="contributor-role">Concept & Organisation</span>
+            <span class="contributor-note">Idee, Planung, Ablauf</span>
+          </div>
+          <div class="contributors-people">
+            <span class="contributor-chip">Lyvt</span>
+            <span class="contributor-chip">Jaxified</span>
+          </div>
+        </li>
+        <li>
+          <div class="contributor-card-header">
+            <span class="contributor-role">Artist</span>
+            <span class="contributor-note">Artworks</span>
+          </div>
+          <div class="contributors-people">
+            <span class="contributor-chip">Zhenganu</span>
+            <span class="contributor-chip">PinkPasi</span>
+            <span class="contributor-chip">Levi</span>
+            <span class="contributor-chip">Niijii</span>
+            <span class="contributor-chip">Lyvt</span>
+            <span class="contributor-chip">Adora</span>
+            <span class="contributor-chip">Entenalb</span>
+            <span class="contributor-chip">Dilluxy</span>
+            <span class="contributor-chip">Whisperliss</span>
+            <span class="contributor-chip">Funky</span>
+            <span class="contributor-chip">Maik</span>
+            <span class="contributor-chip">Jaxified</span>
+            <span class="contributor-chip">Queen_Foxi</span>
+            <span class="contributor-chip">Katzu</span>
+          </div>
+        </li>
+        <li>
+          <div class="contributor-card-header">
+            <span class="contributor-role">Research & Daten</span>
+            <span class="contributor-note">Datenrecherche für Website & Quiz</span>
+          </div>
+          <div class="contributors-people">
+            <span class="contributor-chip">Lyvt</span>
+            <span class="contributor-chip">Jaxified</span>
+          </div>
+        </li>
+        <li>
+          <div class="contributor-card-header">
+            <span class="contributor-role">Developer</span>
+            <span class="contributor-note">Website, Interaktionen, Magic Details</span>
+          </div>
+          <div class="contributors-people">
+            <span class="contributor-chip">Lyvt</span>
+          </div>
+        </li>
+        <li>
+          <div class="contributor-card-header">
+            <span class="contributor-role">Crew Selection</span>
+            <span class="contributor-note">Mitglieder Auswahl</span>
+          </div>
+          <div class="contributors-people">
+            <span class="contributor-chip">Lyvt</span>
+            <span class="contributor-chip">Jaxified</span>
+            <span class="contributor-chip">Neko</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
