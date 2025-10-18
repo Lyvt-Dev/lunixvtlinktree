@@ -109,13 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Wann hat Luni Geburtstag?",
         options: ["04.10", "10.10", "13.10"],
         answer: 1,
-        fact: "10. Oktober – jedes Jahr Glow-Alarm in der Community!",
+        fact: "Jup Luni hat am 10. Oktober Geburtstag <3",
       },
       {
         text: "Was ist Lunis Lieblingsfarbe?",
         options: ["Pink", "Nachtblau", "Lila"],
         answer: 2,
-        fact: "Lila ist der Core-Vibe – passt perfect zu den Neon-Galaxy-Feels.",
+        fact: "Deshalb ist Lila der Core-Vibe dieser website <3",
       },
       {
         text: "Wie viele Frauen hat Luni? 😏",
@@ -133,13 +133,13 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Wann hat Luni die 1.000 Follower auf Twitch erreicht?",
         options: ["03.04.2025", "12.03.2024", "20.08.2025"],
         answer: 2,
-        fact: "Am 20. August 2025 haben wir die 1K Konfetti-Bombe gezündet!",
+        fact: "Am 20. August 2025 hat Luni die 1K geknackt",
       },
       {
         text: "Wann wurde Lunis Twitch-Account erstellt?",
         options: ["16.01.2020", "23.01.2019", "18.02.2020"],
         answer: 0,
-        fact: "Seit 16. Januar 2020 liegt der Account ready for Stardust.",
+        fact: "Seit 16. Januar 2020 liegt der Account in Lunis Händen :3.",
       },
       {
         text: "Wann hat Luni die 100 Follower geknackt?",
@@ -151,19 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
         text: "Wie viele aktive Subs hatte Luni auf ihrem Höchststand?",
         options: ["202", "167", "249"],
         answer: 0,
-        fact: "202 aktive Subs – das war der Peak of Support.",
+        fact: "202 aktive Subs – das ist crazy high lol.",
       },
       {
         text: "Wie viele Zuschauer hatte Luni bei ihrem Peak?",
         options: ["185", "216", "238"],
         answer: 1,
-        fact: "216 gleichzeitige Viewer – der Chat war komplett on fire.",
+        fact: "216 gleichzeitige Viewer sind wirklich viele menschen hihi",
       },
       {
         text: "Wann war Lunis allererster Stream?",
         options: ["19.03.2021", "14.02.2021", "20.03.2021"],
         answer: 1,
-        fact: "Erster Stream am 14. Februar 2021.",
+        fact: "Ihr erster Stream am 14. Februar 2021.",
       },
     ];
 
