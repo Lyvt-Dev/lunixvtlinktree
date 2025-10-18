@@ -273,9 +273,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (score === totalQuestions) {
         message = "Perfekt! Du bist absolut Deep Dive Luni Certified.";
       } else if (score >= totalQuestions - 2) {
-        message = "So close! Deine Glow-Punkte sind fast am Limit.";
+        message = "So close! Deine Punkte sind fast am Limit.";
       } else {
-        message = "Zeit für ein Rewatch der besten Cozy Moments – Glow nachladen!";
+        message = "Zeit für ein Rewatch der besten Cozy Moments – nachladen!";
       }
 
       quizMessageEl.textContent = message;
